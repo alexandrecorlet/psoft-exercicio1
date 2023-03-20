@@ -2,6 +2,7 @@ package repository;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Collection;
 
 import data.Produto;
 
@@ -19,8 +20,12 @@ public class ProdutoRepository {
         return id;
     }
 
-    public Produto consultarProduto(Produto p) {
-        return produtos.get(p.getID());
+    public Produto consultarProduto(String id) {
+        return produtos.get(id);
+    }
+
+    public Collection<Produto> listarProdutos() {
+        return produtos.values();
     }
 
 }
