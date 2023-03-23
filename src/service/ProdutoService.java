@@ -18,6 +18,10 @@ public class ProdutoService {
         return produtoRepository.adicionaProduto(p);
     }
 
+    public String removerProduto(String id) {
+        return produtoRepository.removerProduto(id);
+    }
+
     public Produto consultarProduto(String id) {
         return produtoRepository.consultarProduto(id);
     }
