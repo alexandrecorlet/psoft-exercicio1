@@ -20,6 +20,10 @@ public class LoteService {
         return loteRepository.adicionarLote(l);
     }
 
+    public String removerLote(String id) {
+        return loteRepository.removerLote(id);
+    }
+
     public Lote consultarLote(String idLote) {
         return loteRepository.consultarLote(idLote);
     }
