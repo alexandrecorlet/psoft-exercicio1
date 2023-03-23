@@ -1,6 +1,7 @@
 package fachada;
 
 import java.util.Date;
+import java.util.Collection;
 
 import service.LoteService;
 import service.ProdutoService;
@@ -22,34 +23,32 @@ public class Fachada {
        return produtoService.criarProduto(nome, fabricante, preco);
     }
 
+    public String removerProduto(String id) {
+        return produtoService.removerProduto(id);
+    }
+
     public Produto consultarProduto(String id) {
         return produtoService.consultarProduto(id);
     }
 
-    public void listarProdutos() {
-
-        for (Produto p : produtoService.listarProdutos()) {
-            System.out.println(p.toString());
-            System.out.println();
-        }
-
+    public Collection<Produto> listarProdutos() {
+        return produtoService.listarProdutos();
     }
 
     public String adicionarLote(Produto p, int quantidade, Date dataDeValidade) {
         return loteService.criarLote(p, quantidade, dataDeValidade);
     }
 
+    public String removerLote(String id) {
+        return loteService.removerLote(id);
+    }
+
     public Lote consultarLote(String id) {
         return loteService.consultarLote(id);
     }
 
-    public void listarLotes() {
-
-        for (Lote l : loteService.listarLotes()) {
-            System.out.println(l.toString());
-            System.out.println();
-        }
-
+    public Collection<Lote> listarLotes() {
+        return loteService.listarLotes();
     }
 
 }
