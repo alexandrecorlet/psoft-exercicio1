@@ -20,6 +20,11 @@ public class LoteRepository {
         return id;
     }
 
+    public String removerLote(String id) {
+        loteRepository.remove(id);
+        return id;
+    }
+
     public Lote consultarLote(String idLote) {
         return loteRepository.get(idLote);
     }
