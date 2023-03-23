@@ -20,6 +20,11 @@ public class ProdutoRepository {
         return id;
     }
 
+    public String removerProduto(String id) {
+        produtos.remove(id);
+        return id;
+    }
+
     public Produto consultarProduto(String id) {
         return produtos.get(id);
     }
